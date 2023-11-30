@@ -2,8 +2,8 @@
 import './App.css'
 import Body from './components/Body'
 import { useState, useEffect } from 'react';
-import { FaTrash } from "react-icons/fa";
-import { FiCheck } from "react-icons/fi";
+import { Tareas } from './components/Tareas';
+
 
 
 function App() {
@@ -17,6 +17,14 @@ function App() {
 const [itemTarea, setItemTarea] = useState([
   
 ])
+
+const [mostrarCompletas, setMostrarCompletas] = useState(false);
+
+const estadoTarea = etarea => {
+  setItemTarea( 
+    itemTarea.map(e => (e.name === etarea.name) ? {...e, done: !e.done}: e)
+  )
+}
 
 useEffect(() => {
   let datos = localStorage.getItem('TareasHistorial');
@@ -35,32 +43,20 @@ useEffect(() => {
     <h1 className="text-5xl font-bold text-center">Lista de Tareas Online</h1>
     <div className='ListaTareas'>
       <Body crearTareas={crearTareas}/>
-      <table className='tableEdit'>
-            <tbody>
-            {
-                itemTarea.map(tarea => (
-                
-                <tr key={tarea.name} className='trEdit'>
-                    <td className='tareasTable'>
-                        {tarea.name}
-                  <div className='iconsCont'>
-                  <button>
-                  <FaTrash className='editIcon'/>
-                  </button>
-                  <button>
-                  <FiCheck className='editIcon'/>
-                  </button>
-                  </div>
-                    </td>
-                </tr>
-                ))
-            }
-             
-            </tbody>
-        </table>
-    </div>
+      <Tareas tareas={itemTarea} estadoTareas={estadoTarea}/>
 
-   </div>
+      <div>
+        <button onClick={e=>setMostrarCompletas(!mostrarCompletas)}> Tareas Terminadas </button>
+      </div>
+      {
+        mostrarCompletas === true && (
+          <Tareas tareas={itemTarea} estadoTareas={estadoTarea} mostrarCompletas={mostrarCompletas}/>  
+        )
+      }
+
+     
+    </div>
+   </div> 
 
   )
 }

@@ -89,3 +89,21 @@ table tbody{
   background-color: rgb(220, 250, 240);
   font-size: 1.3em;
 }
+
+.terminadasTareas{
+  justify-content: center;
+  display: flex;
+  background-color: rgb(149, 42, 248);
+  margin-top: 1em;
+}
+.tareasTerminadasbtn{
+  
+  display: flex;
+  justify-content: center;
+  background-color: beige;
+  padding: 0.5em;
+  border-radius: 0.5em;
+  border-width: 1px;
+  border-color: black;
+  
+}

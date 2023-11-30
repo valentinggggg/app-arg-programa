@@ -26,6 +26,11 @@ const estadoTarea = etarea => {
   )
 }
 
+const eliminarTarea = (tareaEliminar) => {
+  const nuevasTareas = itemTarea.filter((tarea) => tarea.name !== tareaEliminar.name);
+  setItemTarea(nuevasTareas);
+};
+
 useEffect(() => {
   let datos = localStorage.getItem('TareasHistorial');
   if (datos){
@@ -43,14 +48,17 @@ useEffect(() => {
     <h1 className="text-5xl font-bold text-center">Lista de Tareas Online</h1>
     <div className='ListaTareas'>
       <Body crearTareas={crearTareas}/>
-      <Tareas tareas={itemTarea} estadoTareas={estadoTarea}/>
+      <Tareas tareas={itemTarea} estadoTareas={estadoTarea}  eliminarTarea={eliminarTarea}/>
 
-      <div>
-        <button onClick={e=>setMostrarCompletas(!mostrarCompletas)}> Tareas Terminadas </button>
+      <div className='terminadasTareas'>
+        <button className='tareasTerminadasbtn'onClick={e=>setMostrarCompletas(!mostrarCompletas)}> ↓ Tareas Terminadas </button>
       </div>
       {
         mostrarCompletas === true && (
-          <Tareas tareas={itemTarea} estadoTareas={estadoTarea} mostrarCompletas={mostrarCompletas}/>  
+          <Tareas tareas={itemTarea} 
+                  estadoTareas={estadoTarea} 
+                  mostrarCompletas={mostrarCompletas}
+                  eliminarTarea={eliminarTarea}/>  
         )
       }
 

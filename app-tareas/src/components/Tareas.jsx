@@ -3,7 +3,7 @@ import { FaTrash } from "react-icons/fa";
 
 
 
-export const Tareas = ({tareas, estadoTareas, mostrarCompletas = false})=>{
+export const Tareas = ({tareas, estadoTareas, eliminarTarea, mostrarCompletas = false})=>{
 
     const taskTableRows = (doneValue) =>
     
@@ -18,7 +18,7 @@ export const Tareas = ({tareas, estadoTareas, mostrarCompletas = false})=>{
             checked={tarea.done}
             onChange={()=> estadoTareas(tarea)}>
             </input>
-                <button>
+                <button onClick={() => eliminarTarea(tarea)}>
                 <FaTrash className='editIcon'/>
                 </button>
                 </div>

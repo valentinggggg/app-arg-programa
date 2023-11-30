@@ -8,6 +8,7 @@
 }
 
 
+
 html {
   scroll-behavior: smooth;
 }
@@ -21,4 +22,70 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.Body-container{
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin: auto;
+  flex-direction: column;
+}
+
+.ListaTareas{
+  background-color: rgb(149, 42, 248);
+  width: 40em;
+  min-height: 40em;
+  border-radius: 0.5em;
+  border-style: solid;
+  border-color: rgb(138, 1, 143);
+  border-width: 0.3em;
+  margin: 1em;
+}
+
+.tableEdit{
+  width: 80%;
+  display: table; /* Cambia a display: table */
+  background-color: rgb(149, 42, 248);
+  margin: auto;
+  border-collapse: separate;
+  border-spacing: 1em;
+}
+
+table tbody{
+  background-color: rgb(149, 42, 248);
+}
+
+.trEdit{
+  height: 100%;
+  width: 100%;
+  display: table-row;
+  background-color: rgb(149, 42, 248);
+}
+
+.tareasTable{
+  background-color: rgb(220, 250, 240);
+  width: 100%;
+  padding: 1em;
+  border-radius: 0.5em;
+  border-color: black;
+  border-width: 1px;
+  height: 100%;
+  display: flex;
+  justify-content: space-between; 
+}
+
+.iconsCont{
+  background-color: rgb(220, 250, 240);
+}
+
+.iconsCont button{
+  margin-left :1em;
+}
+
+.editIcon{
+  background-color: rgb(220, 250, 240);
+  font-size: 1.3em;
 }

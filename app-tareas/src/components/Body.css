@@ -1,24 +1,6 @@
-.Body-container{
-    justify-content: center;
-    height: 100%;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    margin: auto;
-    flex-direction: column;
-    background-color: #fafafa;
-}
 
-.ListaTareas{
-    background-color: rgb(149, 42, 248);
-    width: 40em;
-    min-height: 40em;
-    border-radius: 0.5em;
-    border-style: solid;
-    border-color: rgb(138, 1, 143);
-    border-width: 0.3em;
-    margin: 1em;
-}
+
+
 
 .ListaTareas form{
     background-color: rgb(149, 42, 248);

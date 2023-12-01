@@ -124,3 +124,16 @@ table tbody{
 .iconsCont.TareasCompletas {
   background-color:rgb(131, 248, 209) ;
 }
+
+@media screen and (max-width: 800px) {
+  .ListaTareas{
+    background-color: rgb(149, 42, 248);
+    width: 20em;
+    min-height: 20em;
+    border-radius: 0.5em;
+    border-style: solid;
+    border-color: rgb(138, 1, 143);
+    border-width: 0.3em;
+    margin: 1em;
+  }
+}

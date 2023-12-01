@@ -37,7 +37,7 @@ body {
 .ListaTareas{
   background-color: rgb(149, 42, 248);
   width: 40em;
-  min-height: 40em;
+  min-height: 20em;
   border-radius: 0.5em;
   border-style: solid;
   border-color: rgb(138, 1, 143);
@@ -93,7 +93,7 @@ table tbody{
 .terminadasTareas{
   justify-content: center;
   display: flex;
-  background-color: rgb(149, 42, 248);
+  background-color: #fafafa;
   margin-top: 1em;
 }
 .tareasTerminadasbtn{
@@ -106,4 +106,21 @@ table tbody{
   border-width: 1px;
   border-color: black;
   
+}
+
+
+.trEdit.TareasCompletas{
+  background-color: #fafafa;
+}
+
+.tableEdit.TareasCompletas{
+  background-color: #fafafa;
+}
+
+.tareasTable.TareasCompletas{
+  background-color: rgb(131, 248, 209);
+}
+
+.iconsCont.TareasCompletas {
+  background-color:rgb(131, 248, 209) ;
 }

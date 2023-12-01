@@ -50,7 +50,9 @@ useEffect(() => {
       <Body crearTareas={crearTareas}/>
       <Tareas tareas={itemTarea} estadoTareas={estadoTarea}  eliminarTarea={eliminarTarea}/>
 
-      <div className='terminadasTareas'>
+     
+    </div>
+    <div className='terminadasTareas'>
         <button className='tareasTerminadasbtn'onClick={e=>setMostrarCompletas(!mostrarCompletas)}> ↓ Tareas Terminadas </button>
       </div>
       {
@@ -58,12 +60,11 @@ useEffect(() => {
           <Tareas tareas={itemTarea} 
                   estadoTareas={estadoTarea} 
                   mostrarCompletas={mostrarCompletas}
-                  eliminarTarea={eliminarTarea}/>  
+                  eliminarTarea={eliminarTarea}
+                  tipoTareas='TareasCompletas'/>  
         )
       }
 
-     
-    </div>
    </div> 
 
   )
